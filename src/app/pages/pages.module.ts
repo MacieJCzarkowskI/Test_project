@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AllQuestionsBaseComponent } from './all-questions-base/all-questions-base.component';
-import { ProfileBaseComponent } from './profile-base/profile-base.component';
-import { ProfileMobileComponent } from './profile-mobile/profile-mobile.component';
-import { ProfileTabletComponent } from './profile-tablet/profile-tablet.component';
-import { SingleQuestionBaseComponent } from './single-question-base/single-question-base.component';
-import { SingleQuestionMobileComponent } from './single-question-mobile/single-question-mobile.component';
-import { SingleQuestionTabletComponent } from './single-question-tablet/single-question-tablet.component';
-import { StoryRwdComponent } from './story-rwd/story-rwd.component';
+
+import { AllQuestionComponent } from './all-question/all-question.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SingleQuestionComponent } from './single-question/single-question.component';
+import { ROUTES } from './pages.routes';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(ROUTES),
   ],
-  declarations: [AllQuestionsBaseComponent, ProfileBaseComponent, ProfileMobileComponent, ProfileTabletComponent, SingleQuestionBaseComponent, SingleQuestionMobileComponent, SingleQuestionTabletComponent, StoryRwdComponent]
+  declarations: [
+    AllQuestionComponent,
+    ProfileComponent,
+    SingleQuestionComponent,
+    AllQuestionComponent,
+    ProfileComponent,
+    SingleQuestionComponent
+  ]
 })
 export class PagesModule { }
