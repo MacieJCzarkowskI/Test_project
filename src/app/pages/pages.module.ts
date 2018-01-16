@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SingleQuestionComponent } from './single-question/single-question.component';
 import { ROUTES } from './pages.routes';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,9 +17,7 @@ import { ROUTES } from './pages.routes';
     AllQuestionComponent,
     ProfileComponent,
     SingleQuestionComponent,
-    AllQuestionComponent,
-    ProfileComponent,
-    SingleQuestionComponent
   ]
 })
-export class PagesModule { }
+export class PagesModule {}
+

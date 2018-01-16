@@ -1,7 +1,30 @@
-<ul>
-  <li *ngFor="let row of rows">
-    {{ row.title }}
-  </li>
-</ul>
-<!--{{ rows | json }}
--->
+<div class="container-fluid">
+    <ul class="list-unstyled">
+
+        <li *ngFor="let row of rows">
+
+            <div class="row">
+                <div class="col-md-2 uncolored"></div>
+                <div class="col-md-1 text-center colored-background">
+                    <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre">
+                </div>
+                <div class="col colored-background">
+                    <h2 class="txt1">{{row.author.name}}
+                        <span class="txt2">IS ASKING</span>
+                    </h2>
+                    <h3 class="txt1">{{row.title}}</h3>
+                </div>
+                <div class="col-md-2 uncolored"></div>
+            </div>
+            
+
+            <div class="uncolored">
+                <br>
+                <br>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- plusik w kółku
+https://cdn4.iconfinder.com/data/icons/material-design-content-icons/512/add-circle-512.png -->

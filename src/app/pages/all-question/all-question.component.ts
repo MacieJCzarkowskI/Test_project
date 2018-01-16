@@ -4,7 +4,7 @@ import { QuestionService } from '../../shared/services/question.service';
 @Component({
   selector: 'app-all-question',
   templateUrl: './all-question.component.html',
-  styleUrls: ['./all-question.component.sass']
+  styleUrls: ['./all-question.component.scss']
 })
 export class AllQuestionComponent implements OnInit {
   public rows: any[];
