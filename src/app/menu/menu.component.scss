@@ -11,3 +11,32 @@ img {
     height: 32px;
 }
 
+.filter-by-author {
+    width: auto;
+}
+.space-pad1{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.space-pad2{
+    margin-left: 15px;
+}
+.col-md-6{
+    padding-right: 0;
+
+}
+.vertical-allign{
+    display: flex;
+    height: 100%; 
+    align-items:center;
+}
+
+.last-col span{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.last-col span {
+    :hover{
+        color:grey;
+    }
+}
