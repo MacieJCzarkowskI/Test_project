@@ -1,15 +1,13 @@
-<div class="container-fluid header-question">
+<div class="container header-question">
     <ul class="list-unstyled">
 
         <li *ngFor="let row of rows">
 
-            
             <div class="row">
-                <div class="col-md-2 uncolored "></div>
-                <div class="col-md-1 text-center colored-background header-question">
+                <div class="col-md-2 text-center colored-background header-question">
                     <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre">
                 </div>
-                <div class="col colored-background header-question">
+                <div class="col-md-8 colored-background header-question">
                     <h2 class="txt1">{{row.author.name}}
                         <span class="txt2">IS ASKING</span>
                     </h2>
@@ -19,25 +17,31 @@
             </div>
 
 
-            <!-- <div class="row">
-                <div class="col-md-2 uncolored "></div>
-                <div class="col-md-1 text-center colored-background inside-header-question">
-                    ssss
-                </div>
-                <div class="col colored-background inside-header-question">
-                    sss
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-2 text-center colored-background inside-header-counter inside-header-question">
+                            <hr>
+                            <div class="indside-header-textUnderLine">
+                                ASKED
+                            </div>
+                        </div>
+                        <div *ngFor="let activity of row.activities; let i = index"
+                            [ngClass]="{'d-none d-xl-block': i > 0}"
+                            class="col-md-2 uncolored inside-header-question">
+                            <img [src]='activity.imgPath'>
+                        </div>
+        
+                    </div>
                 </div>
                 <div class="col-md-2 uncolored"></div>
-            </div> -->
+            </div>
 
-            
+
             <div class="uncolored">
                 <br>
                 <br>
             </div>
-        
         </li>
-
     </ul>
-
 </div>
