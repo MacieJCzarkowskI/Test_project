@@ -74,8 +74,8 @@ export class QuestionService {
             ],
             additionalInfo: {
                 relalations: 3,
-                peers: 6,
-                conversations: 1
+                peers: 2,
+                conversations:4
             }
         },
 
@@ -100,9 +100,9 @@ export class QuestionService {
                 
             ],
             additionalInfo: {
-                relalations: 3,
-                peers: 6,
-                conversations: 1
+                relalations: 7,
+                peers: 76,
+                conversations: 14
             }
         },
     ];

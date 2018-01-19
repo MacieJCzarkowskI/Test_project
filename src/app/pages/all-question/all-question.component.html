@@ -30,20 +30,41 @@
                             </div>
                         </div>
                         <div *ngFor="let activity of row.activities; let i = index" 
-                            [ngClass]="{'d-none d-xl-block': i > 0}"    
-                            class="col-xl-2 uncolored inside-header-question">
+                                [ngClass]="{'d-none d-xl-block': i > 0}" 
+                                class="col-xl-2 uncolored inside-header-question">
                             <div class="blank"></div>
-                            <div class="point">
-                            <div class="align-items-inside">
-                                    <div class="text-center">
-                                        <img [src]='activity.imgPath'>
-                                    </div>
+                            
+                            <div *ngIf="i===0 && row.activities.length>4;else other_content">
+                                    <div class="point">
+                                            <div class="uncolored">
+                                                    <div class="text-center text-blank">
+                                                        {{row.activities.length - 4}}
+                                                    </div>
 
-                                    <div class="indside-header-textUnderLine text-center">
-                                        <hr> {{activity.type}}
+                                                    <div class="indside-header-textUnderLine text-center">
+                                                        more activities
+                                                    </div>
+                                            </div>
+                                        </div>
+                            </div>
+                            <ng-template #other_content>
+                                    <div class="point">
+                                    <div class="align-items-inside">
+                                            <div class="text-center">
+                                                <img [src]='activity.imgPath'>
+                                            </div>
+                                            <hr>
+                                            <div class="indside-header-textUnderLine text-center">
+                                                {{activity.type}}
+                                            </div>
                                     </div>
                                 </div>
-                            </div>
+                            </ng-template>
+                            
+                            <!-- 
+                                    **ngIf="index===0" >
+
+                            </div> -->
                         </div>
 
                     </div>
