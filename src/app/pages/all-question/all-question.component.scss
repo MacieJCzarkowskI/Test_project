@@ -11,7 +11,11 @@ img {
     width: 54px;
 }
 
-
+.information-view{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
 
 .txt1 {
     font-size: 1.3rem;
@@ -26,12 +30,53 @@ img {
     padding-top:25px;
     padding-bottom: 25px;
 }
-.inside-header-question{
-    padding-top: 190px;
+.text-down-inside-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
+
 hr{
-    margin-bottom: 8px;
+    width: 100%;
 }
+
 .indside-header-textUnderLine{
     font-size: 12px;
+    padding-bottom: 16px;
+}
+
+
+.blank{
+    padding-top: 2.5rem;
+}
+.align-items-inside{
+
+    background-color: rgba(128, 128, 128, 0.116);
+}
+
+.inside-header-question{
+    padding-right: 0;
+}
+
+.inside-header-question img{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.point{
+    position: relative;
+    &::after{
+        border-radius: 15px;
+        background: gray;
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 100%;
+        content: '';
+        margin-top: -6px;
+        left:50%;
+        margin-left: -8px;
+    }
 }

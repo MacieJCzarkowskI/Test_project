@@ -28,16 +28,7 @@ export class QuestionService {
                 {
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd04.png',
                     type: 'commented'
-                },
-                {
-                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
-                    type: 'answered'
-                },
-                {
-                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/g01.png',
-                    type: 'commented'
-                },
-                
+                }
             ],
             additionalInfo: {
                 relalations: 3,

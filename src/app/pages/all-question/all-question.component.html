@@ -1,43 +1,77 @@
 <div class="container header-question">
     <ul class="list-unstyled">
-
         <li *ngFor="let row of rows">
-
             <div class="row">
-                <div class="col-md-2 text-center colored-background header-question">
-                    <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre">
-                </div>
-                <div class="col-md-8 colored-background header-question">
-                    <h2 class="txt1">{{row.author.name}}
-                        <span class="txt2">IS ASKING</span>
-                    </h2>
-                    <h3 class="txt1">{{row.title}}</h3>
-                </div>
-                <div class="col-md-2 uncolored"></div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-md-10">
+                <div class="col-xl-10">
                     <div class="row">
-                        <div class="col-md-2 text-center colored-background inside-header-counter inside-header-question">
+                        <div class="col-xl-2 text-center colored-background header-question">
+                            <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre">
+                        </div>
+                        <div class="col-xl-8 colored-background header-question">
+                            <h2 class="txt1">{{row.author.name}}
+                                <span class="txt2">IS ASKING</span>
+                            </h2>
+                            <h3 class="txt1">{{row.title}}</h3>
+                        </div>
+                        <div class="col-xl-2 colored-background"></div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 uncolored"></div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="row">
+                        <div class="col-xl-2 colored-background 
+                                    text-down-inside-header">
                             <hr>
                             <div class="indside-header-textUnderLine">
                                 ASKED
                             </div>
                         </div>
-                        <div *ngFor="let activity of row.activities; let i = index"
-                            [ngClass]="{'d-none d-xl-block': i > 0}"
-                            class="col-md-2 uncolored inside-header-question">
-                            <img [src]='activity.imgPath'>
+                        <div *ngFor="let activity of row.activities; let i = index" 
+                            [ngClass]="{'d-none d-xl-block': i > 0}"    
+                            class="col-xl-2 uncolored inside-header-question">
+                            <div class="blank"></div>
+                            <div class="point">
+                            <div class="align-items-inside">
+                                    <div class="text-center">
+                                        <img [src]='activity.imgPath'>
+                                    </div>
+
+                                    <div class="indside-header-textUnderLine text-center">
+                                        <hr> {{activity.type}}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-        
+
                     </div>
                 </div>
-                <div class="col-md-2 uncolored"></div>
+                <div class="col-xl-2 information-view">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle">
+                                    {{row.additionalInfo.relalations}} related discussion
+                                </td>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td class="align-middle">
+                                    {{row.additionalInfo.peers}} peers involved
+                                </td>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td class="align-middle">
+                                    {{row.additionalInfo.conversations}} conversation
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-
             <div class="uncolored">
                 <br>
                 <br>
