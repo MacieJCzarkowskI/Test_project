@@ -49,7 +49,8 @@
                             </div>
                             <ng-template #other_content>
                                     <div class="point">
-                                    <div class="align-items-inside">
+                                    <div class="align-items-inside" 
+                                    *ngIf="i<5;">
                                             <div class="text-center">
                                                 <img [src]='activity.imgPath'>
                                             </div>
