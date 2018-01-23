@@ -17,6 +17,9 @@ import { ROUTES } from './pages.routes';
     AllQuestionComponent,
     ProfileComponent,
     SingleQuestionComponent,
+  ],
+  exports: [
+    ProfileComponent
   ]
 })
 export class PagesModule {}

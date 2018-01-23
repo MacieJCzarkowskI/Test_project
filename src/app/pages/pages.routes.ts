@@ -11,4 +11,5 @@ export const ROUTES: Routes = [
         path: 'all-question',
         component: AllQuestionComponent
     }
+    
 ]

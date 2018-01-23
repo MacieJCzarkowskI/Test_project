@@ -8,11 +8,11 @@ import './shared/rxjs-operators';
 import { QuestionService } from './shared/services/question.service';
 import { MenuComponent } from './menu/menu.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    
   ],
   imports: [
     BrowserModule,

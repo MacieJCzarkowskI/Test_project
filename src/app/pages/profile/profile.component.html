@@ -1,13 +1,20 @@
-<!-- Single button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="container">
+          <div class="img-popup text-center">  
+            <img src= {{cotam.author.imgPath}} class="img-circle" alt="Cinque Terre">
+          </div>
+          <div class = "text-center name-popup">
+            <span>
+              {{cotam.author.name}}
+            </span>
+          </div>
+        </div>
+      
+    </div>
+  </div>
 </div>
+
