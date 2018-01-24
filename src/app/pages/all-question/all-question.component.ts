@@ -9,6 +9,9 @@ import { QuestionService } from '../../shared/services/question.service';
 export class AllQuestionComponent implements OnInit {
   public rows: any[];
   public activityRow;
+  public count;
+  public dane;
+
   constructor(private questionService: QuestionService) { }
 
 
@@ -17,9 +20,10 @@ export class AllQuestionComponent implements OnInit {
     
   }
 
-  openPopup(row){
+  openPopup(row,cnt, data){
     this.activityRow = row;
-    
+    this.count =cnt;
+    this.dane = data;
   }
   private loadData() {
     this.questionService.getQuestionListMock()

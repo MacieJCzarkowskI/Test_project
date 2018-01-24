@@ -37,7 +37,12 @@
           </div>
 
           <div class="container text-center text-how-popup">
-            <span>HOW IT ALL STARTED</span>
+            <div class="row">
+                <div class="col-xl-1 hoverLeft" (click)="changePopupLeft()">&lt; {{elementCount}}</div>
+                <div class="col-xl-10 text-center">HOW IT ALL STARTED</div>
+                <div class="col-xl-1 hoverRight">></div>
+            </div>
+
           </div>
 
           <div class="container text-center text2-how-popup">
@@ -87,9 +92,24 @@
               <span>THE HOTTEST DISCUSSION RHESE DAYS</span>
           </div>
         </div>
-        <div class="footer-background container-fluid"></div>
+        <div class="footer container-fluid">
+            <img src= {{data.activities[0].imgPath}} class="img-circle" alt="Cinque Terre">
+            <div class= "text-center">
+              <div class="name-footer">
+                  <span>{{data.activities[0].name}} </span>
+                  <span class="info-footer">FOUND THE GUARDIAN ARTICLE</span>
+              </div>
+              <div class="question-footer">{{data.title}}</div>
+              <div class="text-center">
+                  <span class="additionalInfo">{{data.additionalInfo.relalations}} relalations</span>
+                  <span class="additionalInfo">{{data.additionalInfo.peers}} peers</span>
+                  <span class="additionalInfo">{{data.additionalInfo.conversations}} conversations</span>
+                  <span class="additionalInfo">{{data.additionalInfo.discution}} discution</span>
+              </div>
+            </div>
+            
+        </div>
       
     </div>
   </div>
 </div>
-

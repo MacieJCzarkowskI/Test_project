@@ -1,15 +1,15 @@
 <div class="container header-question">
     <ul class="list-unstyled">
-        <li *ngFor="let row of rows">
+        <li *ngFor="let row of rows; let i=index">
             <div class="row">
                 <div class="col-xl-10">
                     <div class="row">
                         <div class="col-xl-2 text-center colored-background header-question">
-                            <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre" (click)="openPopup(row)"
+                            <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre" (click)="openPopup(row,i,rows)"
                                 data-toggle="modal" data-target=".bd-example-modal-lg">
                         </div>
                         <div class="col-xl-8 colored-background header-question">
-                            <h2 class="txt1" (click)="openPopup(row)"
+                            <h2 class="txt1" (click)="openPopup(row,i,rows)"
                             data-toggle="modal" data-target=".bd-example-modal-lg">
                             {{row.author.name}}
                                 <span class="txt2">IS ASKING</span>
@@ -97,4 +97,4 @@
     </ul>
 </div>
 
-<app-profile [data]="activityRow"></app-profile>
+<app-profile [data]="activityRow" [elementCount]="count" [rows]="dane"></app-profile>

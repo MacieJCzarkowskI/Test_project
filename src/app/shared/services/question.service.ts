@@ -13,26 +13,31 @@ export class QuestionService {
                 imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207810_face_300x300.png',
                 memberFor: '5 mounths',
                 lastSeen: 'Saturday',
-                activity: 2,
+                activity: 3,
             },
             activities: [
                 {
+                    name: 'Jan',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
                     type: 'commented'
                 },
                 {
+                    name: 'Kris',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i01.png',
                     type: 'commented'
                 },
-                {
+                {   
+                    name: 'Bernoli',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd03.png',
                     type: 'answered'
                 },
                 {
+                    name: 'Maciek',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd04.png',
                     type: 'commented'
                 },
                 {
+                    name: 'Szymon',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
                     type: 'answered'
                 },
@@ -62,30 +67,36 @@ export class QuestionService {
             activities: [
                 
                 {
-                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    name: 'Szymon',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd04.png',   
                     type: 'commented'
                 },
                 
                 {
+                    name: 'olek',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i01.png',
                     type: 'commented'
                 },
 
                 {
+                    name: 'Ola',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd03.png',
                     type: 'answered'
                 },
 
                 {
-                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd04.png',
+                    name: 'Kasia',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
                     type: 'commented'
                 },
 
                 {
+                    name: 'Szymon',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
                     type: 'answered'
                 },
                 {
+                    name: 'Ula',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
                     type: 'answered'
                 },
@@ -109,16 +120,18 @@ export class QuestionService {
                 imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207839_face_300x300.png',
                 memberFor: '2 mounths',
                 lastSeen: 'Mondat',
-                activity: 4,
+                activity: 1
             },
             activities: [
 
                 {
+                    name: 'Kasia',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
                     type: 'commented'
                 },
 
                 {
+                    name: 'Bartek',
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i01.png',
                     type: 'commented'
                 },
