@@ -5,10 +5,13 @@
                 <div class="col-xl-10">
                     <div class="row">
                         <div class="col-xl-2 text-center colored-background header-question">
-                            <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre">
+                            <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre" (click)="openPopup(row)"
+                                data-toggle="modal" data-target=".bd-example-modal-lg">
                         </div>
                         <div class="col-xl-8 colored-background header-question">
-                            <h2 class="txt1">{{row.author.name}}
+                            <h2 class="txt1" (click)="openPopup(row)"
+                            data-toggle="modal" data-target=".bd-example-modal-lg">
+                            {{row.author.name}}
                                 <span class="txt2">IS ASKING</span>
                             </h2>
                             <h3 class="txt1">{{row.title}}</h3>
@@ -46,7 +49,7 @@
                                 </div>
                             </div>
                             <ng-template #other_content>
-                                <div class="point" *ngIf="i<5;">
+                                <div class="point" *ngIf="i<5;">  
                                     <div class="align-items-inside">
                                         <div class="text-center">
                                             <img [src]='activity.imgPath'>
@@ -94,4 +97,4 @@
     </ul>
 </div>
 
-<app-profile [cotam]="rows[0]"></app-profile>
+<app-profile [data]="activityRow"></app-profile>

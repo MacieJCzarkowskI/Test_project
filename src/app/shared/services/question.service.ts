@@ -10,7 +10,10 @@ export class QuestionService {
             title: 'Will insulin make my patient gain weight?',
             author: {
                 name: 'Eva',
-                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207810_face_300x300.png'
+                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207810_face_300x300.png',
+                memberFor: '5 mounths',
+                lastSeen: 'Saturday',
+                activity: 2,
             },
             activities: [
                 {
@@ -38,7 +41,11 @@ export class QuestionService {
             additionalInfo: {
                 relalations: 3,
                 peers: 6,
-                conversations: 1
+                conversations: 1,
+                discution:49,
+                question:30,
+                findings: 129,
+                
             }
         },   
 
@@ -47,7 +54,10 @@ export class QuestionService {
             title: 'Vegan diet in dabetes treatment?',
             author: {
                 name: 'Andrew',
-                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207811_face_300x300.png'
+                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207811_face_300x300.png',
+                memberFor: '11 mounths',
+                lastSeen: 'Friday',
+                activity: 2,
             },
             activities: [
                 
@@ -84,7 +94,10 @@ export class QuestionService {
             additionalInfo: {
                 relalations: 3,
                 peers: 2,
-                conversations:4
+                conversations:4,
+                discution:29,
+                question:10,
+                findings: 19,
             }
         },
 
@@ -93,7 +106,10 @@ export class QuestionService {
             title: 'Vegan diet to stop diabeties proress',
             author: {
                 name: 'Joseph',
-                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207839_face_300x300.png'
+                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207839_face_300x300.png',
+                memberFor: '2 mounths',
+                lastSeen: 'Mondat',
+                activity: 4,
             },
             activities: [
 
@@ -111,7 +127,10 @@ export class QuestionService {
             additionalInfo: {
                 relalations: 7,
                 peers: 76,
-                conversations: 14
+                conversations: 14,
+                discution:23,
+                question:12,
+                findings: 13,
             }
         },
     ];

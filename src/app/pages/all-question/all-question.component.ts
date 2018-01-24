@@ -8,13 +8,19 @@ import { QuestionService } from '../../shared/services/question.service';
 })
 export class AllQuestionComponent implements OnInit {
   public rows: any[];
-
+  public activityRow;
   constructor(private questionService: QuestionService) { }
+
 
   ngOnInit() {
     this.loadData();
+    
   }
 
+  openPopup(row){
+    this.activityRow = row;
+    
+  }
   private loadData() {
     this.questionService.getQuestionListMock()
       .first()

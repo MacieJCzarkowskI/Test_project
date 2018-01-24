@@ -1,18 +1,93 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
         <div class="container">
           <div class="img-popup text-center">  
-            <img src= {{cotam.author.imgPath}} class="img-circle" alt="Cinque Terre">
+            <img src= {{data.author.imgPath}} class="img-circle" alt="Cinque Terre">
           </div>
           <div class = "text-center name-popup">
             <span>
-              {{cotam.author.name}}
+              {{data.author.name}}
             </span>
           </div>
+          <div class="container text-center text-popup">
+              <div class="row">
+                <div class="col-xl-4">
+                  <span>MEMBER FOR  </span>
+                  <span class="color-contekst-popup"> {{data.author.memberFor}}</span>
+                </div>
+
+                <div class="col-xl-4">
+                  <span>LAST SEEN  </span>
+                  <span class="color-contekst-popup"> {{data.author.lastSeen}}</span>
+                </div>
+                
+                <div class="col-xl-4">
+                  <span>ACIVITY LEVEL </span>
+                  <span *ngFor="let activity of data.activities; let i = index" [ngClass]="{'d-none d-xl-block': i > data.author.activity}"> 
+                      <span *ngIf="i<data.author.activity">
+                          <img src= "https://png.pngtree.com/element_origin_min_pic/00/00/00/00569a3655865e3.jpg" class="img-circle medal-popup" alt="Cinque Terre">
+                      </span>
+                  </span>
+                </div>
+            </div>
+          </div>
+          <div class="container text-center">
+            <hr>
+          </div>
+
+          <div class="container text-center text-how-popup">
+            <span>HOW IT ALL STARTED</span>
+          </div>
+
+          <div class="container text-center text2-how-popup">
+              <span>THAT'S WHERE WE HAVE BEEN THESE 5 MOUNTHS AGO</span>
+          </div>
+
+          <div class="container container-cubes">
+            <div class= "row text-center">
+                <div class="col-xl-2"></div>
+                <div class="col-xl-2">
+                  <div class="cube1">
+                      <p class="cube-text-1">{{data.additionalInfo.peers}}</p>
+                      <p>peers</p>
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="cube2 text-center">
+                      <p class="cube-text-2">{{data.additionalInfo.discution}}</p>
+                      <p>discussions</p>
+                  </div>
+                </div>
+                <div class="col-xl-2">
+                  <div class="cube3 text-center">
+                      <p class="cube-text-3 text-left">{{data.additionalInfo.question}}</p>
+                      <p>question</p>
+                  </div>
+                  
+                </div>
+                <div class="col-xl-2">
+                  <div class="cube4 text-center">
+                      <p class="cube-text-4 text-left">{{data.additionalInfo.findings}}</p>
+                      <p>findings</p>  
+                  </div>
+                </div>
+                <div class="col-xl-2"></div>
+            </div>
+          </div>
+
+          <div class="container text-center text2-how-popup">
+              <span>WHO JOINED THE PLATFORM THE SAME PERIOD</span>
+          </div>
+          <div class="">
+            
+          </div>
+
+          <div class="container text-center text2-how-popup">
+              <span>THE HOTTEST DISCUSSION RHESE DAYS</span>
+          </div>
         </div>
+        <div class="footer-background container-fluid"></div>
       
     </div>
   </div>

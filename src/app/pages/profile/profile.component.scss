@@ -11,3 +11,102 @@
     color: #0062B1;
     margin-bottom: 1rem;
 }
+.text-popup{
+    color: gray;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+.color-contekst-popup{
+    color:black;
+}
+.medal-popup{
+    height: 20px;
+    width: 20px;
+}
+.text-how-popup{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.text2-how-popup{
+    color:grey;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.container-cubes{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+.cube1 {
+    height: 100px;
+    width: 100px;
+    background-color: #E0F5FD;
+    transform:rotate(30deg);
+}
+  .cube1 p {
+    transform: rotate(-30deg);
+}
+
+.cube2 {
+    height: 100px;
+    width: 100px;
+    background-color: #E0F5FD;
+   transform:rotate(-20deg);
+  }
+.cube2 p {
+    transform: rotate(20deg);
+}
+
+.cube3 {
+    height: 100px;
+    width: 100px;
+    background-color: #E0F5FD;
+   transform:rotate(45deg);
+  }
+.cube3 p {
+    transform: rotate(-45deg);
+}
+
+.cube4 {
+    height: 100px;
+    width: 100px;
+    background-color: #E0F5FD;
+   transform:rotate(20deg);
+  }
+.cube4 p {
+    transform: rotate(-20deg);
+}
+.cube-text-1{
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 25px;
+}
+.cube-text-2{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.cube-text-3{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.cube-text-4{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.footer-background{
+    width: 100%;
+    height:200px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(185, 184, 184,0.4),
+        rgb(255, 255, 255) 5px,
+        white 5px
+      );
+      padding: 0 0 0 0;
+      margin-left: 0;
+}
