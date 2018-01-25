@@ -1,3 +1,64 @@
-<p>
-  single-question works!
-</p>
+
+ <div class="container header-question">
+        <ul class="list-unstyled">
+            <li *ngFor="let row of rows; let i=index">
+                <div class="row">
+                    <div class="col-xl-10">
+                        <div class="row">
+                            <div class="col-xl-2 text-center colored-background header-question">
+                                <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre" (click)="openPopup(row,i,rows)"
+                                    data-toggle="modal" data-target=".bd-example-modal-lg">
+                            </div>
+                            <div class="col-xl-8 colored-background header-question">
+                                <h2 class="txt1" (click)="openPopup(row,i,rows)"
+                                data-toggle="modal" data-target=".bd-example-modal-lg">
+                                {{row.author.name}}
+                                    <span class="txt2">IS ASKING</span>
+                                                        
+                                </h2>
+                                <h3 class="txt1">{{row.title}}</h3>
+                            </div>
+                            <div class="col-xl-2 colored-background">
+                                <div class="nameTochange1 text-right">UNFOLLOW</div>  
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                    <div class="col-xl-2 uncolored"></div>
+                </div>
+                 <div class="row">
+                    <div class="col-xl-10">
+                        <div class="row">
+                            <div class="col-xl-2 colored-background 
+                                        text-down-inside-header">
+                                
+                            </div>
+
+                            <div class="col-xl-7 information-inside-box">
+                                 {{row.author.text}}   
+                            </div>
+                            <div class="col-xl-2">
+                                <div class="upvotes-text">     <!-- to change -->
+                                    <span class="upvotes-text">{{row.author.upvotes}}</span>
+                                    <span>upvotes</span>
+                                </div>
+                            </div>
+                            <div class="col-xl-1">
+                                <div class="upvotes-text1">
+                                        <p><i class="arrow up"></i></p>
+                                        <p><i class="arrow down"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                </div> 
+                <div class="uncolored">
+                    <br>
+                    <br>
+                </div>
+            </li>
+        </ul>
+    </div> 
+

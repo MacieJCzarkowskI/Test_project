@@ -12,6 +12,8 @@ export class AllQuestionComponent implements OnInit {
   public count;
   public dane;
 
+  public amountOfQuestion = 3;
+  public singleQuestion;
   constructor(private questionService: QuestionService) { }
 
 
@@ -25,6 +27,21 @@ export class AllQuestionComponent implements OnInit {
     this.count =cnt;
     this.dane = data;
   }
+
+  changePageToSingleQuestion(row){
+  this.singleQuestion=row;
+  }
+
+  loadMore(){
+    if(this.rows.length === this.amountOfQuestion+1){
+      this.amountOfQuestion=this.amountOfQuestion +1;
+    }else if(this.rows.length === this.amountOfQuestion+2){
+      this.amountOfQuestion=this.amountOfQuestion +2;
+    }else if(this.rows.length>this.amountOfQuestion){
+    this.amountOfQuestion=this.amountOfQuestion +3;
+    }
+  }
+  
   private loadData() {
     this.questionService.getQuestionListMock()
       .first()

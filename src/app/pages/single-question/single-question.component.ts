@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-single-question',
   templateUrl: './single-question.component.html',
-  styleUrls: ['./single-question.component.sass']
+  styleUrls: ['./single-question.component.scss']
 })
 export class SingleQuestionComponent implements OnInit {
+
+  @Input() row;
 
   constructor() { }
 

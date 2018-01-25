@@ -7,6 +7,7 @@ export class QuestionService {
     getQuestionListMock(page: number = 0): Observable<any[]> {
         const data = [
         {
+            id:1,
             title: 'Will insulin make my patient gain weight?',
             author: {
                 name: 'Eva',
@@ -14,6 +15,8 @@ export class QuestionService {
                 memberFor: '5 mounths',
                 lastSeen: 'Saturday',
                 activity: 3,
+                text: "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet",
+                upvotes:233,
             },
             activities: [
                 {
@@ -56,6 +59,7 @@ export class QuestionService {
 
 
         {
+            id:2,
             title: 'Vegan diet in dabetes treatment?',
             author: {
                 name: 'Andrew',
@@ -63,6 +67,8 @@ export class QuestionService {
                 memberFor: '11 mounths',
                 lastSeen: 'Friday',
                 activity: 2,
+                text: "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet",
+                upvotes:3,
             },
             activities: [
                 
@@ -114,13 +120,131 @@ export class QuestionService {
 
 
         {
+            id:3,
             title: 'Vegan diet to stop diabeties proress',
             author: {
                 name: 'Joseph',
                 imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207839_face_300x300.png',
                 memberFor: '2 mounths',
                 lastSeen: 'Mondat',
-                activity: 1
+                activity: 1,
+                text: "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet",
+                upvotes:111,
+
+            },
+            activities: [
+
+                {
+                    name: 'Kasia',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    type: 'commented'
+                },
+
+                {
+                    name: 'Bartek',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i01.png',
+                    type: 'commented'
+                },
+                
+            ],
+            additionalInfo: {
+                relalations: 7,
+                peers: 76,
+                conversations: 14,
+                discution:23,
+                question:12,
+                findings: 13,
+            }
+        },
+
+        {
+            id:4,
+            title: 'Vegan diet to stop diabeties proress',
+            author: {
+                name: 'Joseph',
+                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207839_face_300x300.png',
+                memberFor: '2 mounths',
+                lastSeen: 'Mondat',
+                activity: 1,
+                text: "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet",
+                upvotes:111,
+
+            },
+            activities: [
+
+                {
+                    name: 'Kasia',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    type: 'commented'
+                },
+
+                {
+                    name: 'Bartek',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i01.png',
+                    type: 'commented'
+                },
+                
+            ],
+            additionalInfo: {
+                relalations: 7,
+                peers: 76,
+                conversations: 14,
+                discution:23,
+                question:12,
+                findings: 13,
+            }
+        },
+
+        {
+            id:5,
+            title: 'Vegan diet to stop diabeties proress',
+            author: {
+                name: 'Joseph',
+                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207839_face_300x300.png',
+                memberFor: '2 mounths',
+                lastSeen: 'Mondat',
+                activity: 1,
+                text: "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet",
+                upvotes:111,
+
+            },
+            activities: [
+
+                {
+                    name: 'Kasia',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    type: 'commented'
+                },
+
+                {
+                    name: 'Bartek',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i01.png',
+                    type: 'commented'
+                },
+                
+            ],
+            additionalInfo: {
+                relalations: 7,
+                peers: 76,
+                conversations: 14,
+                discution:23,
+                question:12,
+                findings: 13,
+            }
+        },
+
+        {
+            id:6,
+            title: 'Vegan diet to stop diabeties proress',
+            author: {
+                name: 'Joseph',
+                imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207839_face_300x300.png',
+                memberFor: '2 mounths',
+                lastSeen: 'Mondat',
+                activity: 1,
+                text: "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet",
+                upvotes:111,
+
             },
             activities: [
 
