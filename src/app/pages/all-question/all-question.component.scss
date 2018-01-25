@@ -97,6 +97,13 @@ hr{
 
 
 /////// to delete
+
+.header-question{
+    padding-top:25px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
 .nameTochange1{
     margin-top: 2rem;
     color: #0062B1;
@@ -127,4 +134,20 @@ i {
 }
 .upvotes-text1{
     margin-top: 1rem;
+}
+.box-under-question{
+    font-size: 1.3rem;
+    position: absolute;
+    margin-left:50%;
+    left: -100px;
+    bottom:25px;
+    color:red;
+    border: 1px solid gray;
+    width: 200px;
+}
+.ansers-box{
+    position: relative;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }

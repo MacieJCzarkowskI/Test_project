@@ -44,7 +44,26 @@ export class QuestionService {
                     imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
                     type: 'answered'
                 },
-                
+            ],
+            comments: [
+                {
+                    name: 'Jan',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+                        name: 'Szymon',
+                        imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
+                        anser:"Looooorem ipsum"
+                    }
+                },
+                {
+                    name: 'Bernoli',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd03.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+
+                    }
+                }   
             ],
             additionalInfo: {
                 relalations: 3,
@@ -108,6 +127,26 @@ export class QuestionService {
                 },
 
             ],
+            comments: [
+                {
+                    name: 'Jan',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+                        name: 'Szymon',
+                        imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
+                        anser:"Looooorem ipsum"
+                    }
+                },
+                {
+                    name: 'Bernoli',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd03.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+
+                    }
+                }   
+            ],
             additionalInfo: {
                 relalations: 3,
                 peers: 2,
@@ -147,6 +186,26 @@ export class QuestionService {
                 },
                 
             ],
+            comments: [
+                {
+                    name: 'Jan',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+                        name: 'Szymon',
+                        imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
+                        anser:"Looooorem ipsum"
+                    }
+                },
+                {
+                    name: 'Bernoli',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd03.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+
+                    }
+                }   
+            ],
             additionalInfo: {
                 relalations: 7,
                 peers: 76,
@@ -184,6 +243,26 @@ export class QuestionService {
                     type: 'commented'
                 },
                 
+            ],
+            comments: [
+                {
+                    name: 'Jan',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+                        name: 'Szymon',
+                        imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
+                        anser:"Looooorem ipsum"
+                    }
+                },
+                {
+                    name: 'Bernoli',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd03.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+
+                    }
+                }   
             ],
             additionalInfo: {
                 relalations: 7,
@@ -223,6 +302,26 @@ export class QuestionService {
                 },
                 
             ],
+            comments: [
+                {
+                    name: 'Jan',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+                        name: 'Szymon',
+                        imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
+                        anser:"Looooorem ipsum"
+                    }
+                },
+                {
+                    name: 'Bernoli',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd03.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+
+                    }
+                }   
+            ],
             additionalInfo: {
                 relalations: 7,
                 peers: 76,
@@ -260,6 +359,26 @@ export class QuestionService {
                     type: 'commented'
                 },
                 
+            ],
+            comments: [
+                {
+                    name: 'Jan',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/n05.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+                        name: 'Szymon',
+                        imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/i02.png',
+                        anser:"Looooorem ipsum"
+                    }
+                },
+                {
+                    name: 'Bernoli',
+                    imgPath: 'https://findicons.com/files/icons/1072/face_avatars/300/fd03.png',
+                    comment:"Lorem ipsum",
+                    answer: {
+
+                    }
+                }   
             ],
             additionalInfo: {
                 relalations: 7,
