@@ -28,7 +28,7 @@ export class AllQuestionComponent implements OnInit {
 
   openPopup(data, elementCount, rows){
     let dialogRef = this.dialog.open(ProfileComponent, {
-      width: '550px',
+      width: '800px',
       data: { data, elementCount, rows }
     });
   }

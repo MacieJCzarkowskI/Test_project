@@ -1,115 +1,110 @@
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="container">
-          <div class="img-popup text-center">  
-            <img src= {{data.data.author.imgPath}} class="img-circle" alt="Cinque Terre">
+
+<mat-dialog-content>
+  <div class="container">
+    <div class="img-popup text-center">  
+      <img src= {{data.data.author.imgPath}} class="img-circle" alt="Cinque Terre">
+    </div>
+    <div class = "text-center name-popup">
+      <span>
+        {{data.data.author.name}}
+      </span>
+    </div>
+    <div class="container text-center text-popup">
+        <div class="row">
+          <div class="col-xl-4">
+            <span>MEMBER FOR  </span>
+            <span class="color-contekst-popup"> {{data.data.author.memberFor}}</span>
           </div>
-          <div class = "text-center name-popup">
-            <span>
-              {{data.data.author.name}}
+
+          <div class="col-xl-4">
+            <span>LAST SEEN  </span>
+            <span class="color-contekst-popup"> {{data.data.author.lastSeen}}</span>
+          </div>
+
+          <div class="col-xl-4">
+            <span>ACIVITY LEVEL </span>
+            <span *ngFor="let activity of data.data.activities; let i = index" [ngClass]="{'d-none d-xl-block': i > data.data.author.activity}"> 
+                <span *ngIf="i<data.data.author.activity">
+                    <img src= "https://png.pngtree.com/element_origin_min_pic/00/00/00/00569a3655865e3.jpg" class="img-circle medal-popup" alt="Cinque Terre">
+                </span>
             </span>
           </div>
-          <div class="container text-center text-popup">
-              <div class="row">
-                <div class="col-xl-4">
-                  <span>MEMBER FOR  </span>
-                  <span class="color-contekst-popup"> {{data.data.author.memberFor}}</span>
-                </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <hr>
+    </div>
 
-                <div class="col-xl-4">
-                  <span>LAST SEEN  </span>
-                  <span class="color-contekst-popup"> {{data.data.author.lastSeen}}</span>
-                </div>
-                
-                <div class="col-xl-4">
-                  <span>ACIVITY LEVEL </span>
-                  <span *ngFor="let activity of data.data.activities; let i = index" [ngClass]="{'d-none d-xl-block': i > data.data.author.activity}"> 
-                      <span *ngIf="i<data.data.author.activity">
-                          <img src= "https://png.pngtree.com/element_origin_min_pic/00/00/00/00569a3655865e3.jpg" class="img-circle medal-popup" alt="Cinque Terre">
-                      </span>
-                  </span>
-                </div>
+    <div class="container text-center text-how-popup">
+      <div class="row">
+          <div class="col-xl-1 hoverLeft" (click)="changePopupLeft()">&lt;</div>
+          <div class="col-xl-10 text-center">HOW IT ALL STARTED</div>
+          <div class="col-xl-1 hoverRight" (click)="changePopupRight()">></div>
+      </div>
+
+    </div>
+
+    <div class="container text-center text2-how-popup">
+        <span>THAT'S WHERE WE HAVE BEEN THESE 5 MOUNTHS AGO</span>
+    </div>
+
+    <div class="container container-cubes">
+      <div class= "row text-center">
+          <div class="col-xl-2"></div>
+          <div class="col-xl-2">
+            <div class="cube1">
+                <p class="cube-text-1">{{data.data.additionalInfo.peers}}</p>
+                <p>peers</p>
             </div>
           </div>
-          <div class="container text-center">
-            <hr>
-          </div>
-
-          <div class="container text-center text-how-popup">
-            <div class="row">
-                <div class="col-xl-1 hoverLeft" (click)="changePopupLeft()">&lt;</div>
-                <div class="col-xl-10 text-center">HOW IT ALL STARTED</div>
-                <div class="col-xl-1 hoverRight" (click)="changePopupRight()">></div>
-            </div>
-
-          </div>
-
-          <div class="container text-center text2-how-popup">
-              <span>THAT'S WHERE WE HAVE BEEN THESE 5 MOUNTHS AGO</span>
-          </div>
-
-          <div class="container container-cubes">
-            <div class= "row text-center">
-                <div class="col-xl-2"></div>
-                <div class="col-xl-2">
-                  <div class="cube1">
-                      <p class="cube-text-1">{{data.data.additionalInfo.peers}}</p>
-                      <p>peers</p>
-                  </div>
-                </div>
-                <div class="col-xl-2">
-                  <div class="cube2 text-center">
-                      <p class="cube-text-2">{{data.data.additionalInfo.discution}}</p>
-                      <p>discussions</p>
-                  </div>
-                </div>
-                <div class="col-xl-2">
-                  <div class="cube3 text-center">
-                      <p class="cube-text-3 text-left">{{data.data.additionalInfo.question}}</p>
-                      <p>question</p>
-                  </div>
-                  
-                </div>
-                <div class="col-xl-2">
-                  <div class="cube4 text-center">
-                      <p class="cube-text-4 text-left">{{data.data.additionalInfo.findings}}</p>
-                      <p>findings</p>  
-                  </div>
-                </div>
-                <div class="col-xl-2"></div>
+          <div class="col-xl-2">
+            <div class="cube2 text-center">
+                <p class="cube-text-2">{{data.data.additionalInfo.discution}}</p>
+                <p>discussions</p>
             </div>
           </div>
-
-          <div class="container text-center text2-how-popup">
-              <span>WHO JOINED THE PLATFORM THE SAME PERIOD</span>
-          </div>
-          <div class="">
-            
-          </div>
-
-          <div class="container text-center text2-how-popup">
-              <span>THE HOTTEST DISCUSSION RHESE DAYS</span>
-          </div>
-        </div>
-        <div class="footer container-fluid">
-            <img src= {{data.data.activities[0].imgPath}} class="img-circle" alt="Cinque Terre">
-            <div class= "text-center">
-              <div class="name-footer">
-                  <span>{{data.data.activities[0].name}} </span>
-                  <span class="info-footer">FOUND THE GUARDIAN ARTICLE</span>
-              </div>
-              <div class="question-footer">{{data.data.title}}</div>
-              <div class="text-center">
-                  <span class="additionalInfo">{{data.data.additionalInfo.relalations}} relalations</span>
-                  <span class="additionalInfo">{{data.data.additionalInfo.peers}} peers</span>
-                  <span class="additionalInfo">{{data.data.additionalInfo.conversations}} conversations</span>
-                  <span class="additionalInfo">{{data.data.additionalInfo.discution}} discution</span>
-              </div>
+          <div class="col-xl-2">
+            <div class="cube3 text-center">
+                <p class="cube-text-3 text-left">{{data.data.additionalInfo.question}}</p>
+                <p>question</p>
             </div>
             
-        </div>
+          </div>
+          <div class="col-xl-2">
+            <div class="cube4 text-center">
+                <p class="cube-text-4 text-left">{{data.data.additionalInfo.findings}}</p>
+                <p>findings</p>  
+            </div>
+          </div>
+          <div class="col-xl-2"></div>
+      </div>
+    </div>
+
+    <div class="container text-center text2-how-popup">
+        <span>WHO JOINED THE PLATFORM THE SAME PERIOD</span>
+    </div>
+    <div class="">
       
     </div>
+
+    <div class="container text-center text2-how-popup">
+        <span>THE HOTTEST DISCUSSION RHESE DAYS</span>
+    </div>
   </div>
-</div>
+  <div class="footer container-fluid">
+      <img src= {{data.data.activities[0].imgPath}} class="img-circle" alt="Cinque Terre">
+      <div class= "text-center">
+        <div class="name-footer">
+            <span>{{data.data.activities[0].name}} </span>
+            <span class="info-footer">FOUND THE GUARDIAN ARTICLE</span>
+        </div>
+        <div class="question-footer">{{data.data.title}}</div>
+        <div class="text-center">
+            <span class="additionalInfo">{{data.data.additionalInfo.relalations}} relalations</span>
+            <span class="additionalInfo">{{data.data.additionalInfo.peers}} peers</span>
+            <span class="additionalInfo">{{data.data.additionalInfo.conversations}} conversations</span>
+            <span class="additionalInfo">{{data.data.additionalInfo.discution}} discution</span>
+        </div>
+      </div>
+  </div>
+</mat-dialog-content>
