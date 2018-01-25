@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../../shared/services/question.service';
+import { MatDialog } from '@angular/material';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-all-question',
@@ -14,7 +16,9 @@ export class AllQuestionComponent implements OnInit {
 
   public amountOfQuestion = 3;
   public singleQuestion;
-  constructor(private questionService: QuestionService) { }
+  constructor(
+    private questionService: QuestionService,
+    public dialog: MatDialog) { }
 
 
   ngOnInit() {
@@ -22,10 +26,11 @@ export class AllQuestionComponent implements OnInit {
     
   }
 
-  openPopup(row,cnt, data){
-    this.activityRow = row;
-    this.count =cnt;
-    this.dane = data;
+  openPopup(data, elementCount, rows){
+    let dialogRef = this.dialog.open(ProfileComponent, {
+      width: '550px',
+      data: { data, elementCount, rows }
+    });
   }
 
   changePageToSingleQuestion(row){

@@ -1,4 +1,4 @@
-    <!-- <div class="container header-question">
+    S<div class="container header-question">
     <ul class="list-unstyled">
         <li *ngFor="let row of rows; let i=index">
             <div *ngIf="i<amountOfQuestion">
@@ -6,8 +6,7 @@
                 <div class="col-xl-10">
                     <div class="row">
                         <div class="col-xl-2 text-center colored-background header-question">
-                            <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre" (click)="openPopup(row,i,rows)"
-                                data-toggle="modal" data-target=".bd-example-modal-lg">
+                            <img [src]="row.author.imgPath" class="img-circle" alt="Cinque Terre" (click)="openPopup(row,i,rows)">
                         </div>
                         <div class="col-xl-8 colored-background header-question">
                             <h2 class="txt1" (click)="openPopup(row,i,rows)"
@@ -15,7 +14,7 @@
                             {{row.author.name}}
                                 <span class="txt2">IS ASKING</span>
                             </h2>
-                            <h3 class="txt1" (click)="changePageToSingleQuestion(row)">{{row.title}}</h3>
+                            <a [routerLink]="['/single-question', row.id]" class="txt1">{{ row.title }}</a>
                         </div>
                         <div class="col-xl-2 colored-background"></div>
                     </div>
@@ -100,80 +99,4 @@
 </div>
 
 
-<app-profile [data]="activityRow" [elementCount]="count" [rows]="dane"></app-profile> 
-<app-single-question [row]="singleQuestion"></app-single-question> 
 
-
- -->
-
-
-
- <div class="container header-question">
-        <ul class="list-unstyled">
-            <li>
-                <div class="row">
-                    <div class="col-xl-10">
-                        <div class="row">
-                            <div class="col-xl-2 text-center colored-background header-question">
-                                <img [src]="rows[0].author.imgPath" class="img-circle" alt="Cinque Terre"
-                                    data-toggle="modal" data-target=".bd-example-modal-lg">
-                            </div>
-                            <div class="col-xl-8 colored-background header-question">
-                                <h2 class="txt1" data-toggle="modal" data-target=".bd-example-modal-lg">
-                                {{rows[0].author.name}}
-                                    <span class="txt2">IS ASKING</span>
-                                                        
-                                </h2>
-                                <h3 class="txt1">{{rows[0].title}}</h3>
-                            </div>
-                            <div class="col-xl-2 colored-background">
-                                <div class="nameTochange1 text-right">UNFOLLOW</div>  
-                            </div>
-                            
-                        </div>
-                    </div>
-    
-                    <div class="col-xl-2 uncolored"></div>
-                </div>
-                 <div class="row">
-                    <div class="col-xl-10">
-                        <div class="row">
-                            <div class="col-xl-2 colored-background 
-                                        text-down-inside-header">
-                                
-                            </div>
-
-                            <div class="col-xl-7 information-inside-box">
-                                 {{rows[0].author.text}}   
-                            </div>
-                            <div class="col-xl-2">
-                                <div class="upvotes-text">     <!-- to change -->
-                                    <span class="upvotes-text">{{rows[0].author.upvotes}}</span>
-                                    <span>upvotes</span>
-                                </div>
-                            </div>
-                            <div class="col-xl-1">
-                                <div class="upvotes-text1">
-                                        <p><i class="arrow up"></i></p>
-                                        <p><i class="arrow down"></i></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
- 
-                </div> 
-                <div class="uncolored">
-                </div>
-            </li>
-        </ul>
-        <div class="text-center box-under-question">GIVE new answer</div>
-       
-    </div> 
-    <div class="container">
-            <div class="ansers-box text-center">{{rows[0].comments.length}} already answered {{rows[0].author.name}}</div>
-            <!-- <div class="row">
-               <div class="col-xl-2">ssss</div>
-               <div class="col-xl-5">sdddsss</div>
-               <div class="col-xl-2">ssssdddd</div>
-            </div> -->
-    </div>

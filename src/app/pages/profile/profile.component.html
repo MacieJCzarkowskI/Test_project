@@ -3,29 +3,29 @@
     <div class="modal-content">
         <div class="container">
           <div class="img-popup text-center">  
-            <img src= {{data.author.imgPath}} class="img-circle" alt="Cinque Terre">
+            <img src= {{data.data.author.imgPath}} class="img-circle" alt="Cinque Terre">
           </div>
           <div class = "text-center name-popup">
             <span>
-              {{data.author.name}}
+              {{data.data.author.name}}
             </span>
           </div>
           <div class="container text-center text-popup">
               <div class="row">
                 <div class="col-xl-4">
                   <span>MEMBER FOR  </span>
-                  <span class="color-contekst-popup"> {{data.author.memberFor}}</span>
+                  <span class="color-contekst-popup"> {{data.data.author.memberFor}}</span>
                 </div>
 
                 <div class="col-xl-4">
                   <span>LAST SEEN  </span>
-                  <span class="color-contekst-popup"> {{data.author.lastSeen}}</span>
+                  <span class="color-contekst-popup"> {{data.data.author.lastSeen}}</span>
                 </div>
                 
                 <div class="col-xl-4">
                   <span>ACIVITY LEVEL </span>
-                  <span *ngFor="let activity of data.activities; let i = index" [ngClass]="{'d-none d-xl-block': i > data.author.activity}"> 
-                      <span *ngIf="i<data.author.activity">
+                  <span *ngFor="let activity of data.data.activities; let i = index" [ngClass]="{'d-none d-xl-block': i > data.data.author.activity}"> 
+                      <span *ngIf="i<data.data.author.activity">
                           <img src= "https://png.pngtree.com/element_origin_min_pic/00/00/00/00569a3655865e3.jpg" class="img-circle medal-popup" alt="Cinque Terre">
                       </span>
                   </span>
@@ -54,26 +54,26 @@
                 <div class="col-xl-2"></div>
                 <div class="col-xl-2">
                   <div class="cube1">
-                      <p class="cube-text-1">{{data.additionalInfo.peers}}</p>
+                      <p class="cube-text-1">{{data.data.additionalInfo.peers}}</p>
                       <p>peers</p>
                   </div>
                 </div>
                 <div class="col-xl-2">
                   <div class="cube2 text-center">
-                      <p class="cube-text-2">{{data.additionalInfo.discution}}</p>
+                      <p class="cube-text-2">{{data.data.additionalInfo.discution}}</p>
                       <p>discussions</p>
                   </div>
                 </div>
                 <div class="col-xl-2">
                   <div class="cube3 text-center">
-                      <p class="cube-text-3 text-left">{{data.additionalInfo.question}}</p>
+                      <p class="cube-text-3 text-left">{{data.data.additionalInfo.question}}</p>
                       <p>question</p>
                   </div>
                   
                 </div>
                 <div class="col-xl-2">
                   <div class="cube4 text-center">
-                      <p class="cube-text-4 text-left">{{data.additionalInfo.findings}}</p>
+                      <p class="cube-text-4 text-left">{{data.data.additionalInfo.findings}}</p>
                       <p>findings</p>  
                   </div>
                 </div>
@@ -93,18 +93,18 @@
           </div>
         </div>
         <div class="footer container-fluid">
-            <img src= {{data.activities[0].imgPath}} class="img-circle" alt="Cinque Terre">
+            <img src= {{data.data.activities[0].imgPath}} class="img-circle" alt="Cinque Terre">
             <div class= "text-center">
               <div class="name-footer">
-                  <span>{{data.activities[0].name}} </span>
+                  <span>{{data.data.activities[0].name}} </span>
                   <span class="info-footer">FOUND THE GUARDIAN ARTICLE</span>
               </div>
-              <div class="question-footer">{{data.title}}</div>
+              <div class="question-footer">{{data.data.title}}</div>
               <div class="text-center">
-                  <span class="additionalInfo">{{data.additionalInfo.relalations}} relalations</span>
-                  <span class="additionalInfo">{{data.additionalInfo.peers}} peers</span>
-                  <span class="additionalInfo">{{data.additionalInfo.conversations}} conversations</span>
-                  <span class="additionalInfo">{{data.additionalInfo.discution}} discution</span>
+                  <span class="additionalInfo">{{data.data.additionalInfo.relalations}} relalations</span>
+                  <span class="additionalInfo">{{data.data.additionalInfo.peers}} peers</span>
+                  <span class="additionalInfo">{{data.data.additionalInfo.conversations}} conversations</span>
+                  <span class="additionalInfo">{{data.data.additionalInfo.discution}} discution</span>
               </div>
             </div>
             

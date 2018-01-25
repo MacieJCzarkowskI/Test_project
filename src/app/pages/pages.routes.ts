@@ -9,7 +9,7 @@ export const ROUTES: Routes = [
     },
     {
         path: 'all-question',
-        component: AllQuestionComponent
+        component: AllQuestionComponent,
     },
     {
         path: 'single-question/:id',
