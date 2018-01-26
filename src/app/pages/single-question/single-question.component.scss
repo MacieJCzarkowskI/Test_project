@@ -91,3 +91,104 @@ hr{
     margin-top: 3rem;
     margin-bottom: 8em;
 }
+
+
+/////// to delete
+
+.header-question{
+    padding-top:25px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.nameTochange1{
+    margin-top: 2rem;
+    color: #0062B1;
+}
+.information-inside-box{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.upvotes-text{
+    margin-top: 2rem;
+    margin-right: 15px;;
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+i {
+    border: solid #0062B1;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.upvotes-text1{
+    margin-top: 1rem;
+}
+.box-under-question{
+    font-size: 1.3rem;
+    position: absolute;
+    margin-left:50%;
+    left: -100px;
+    bottom:25px;
+    color:grey;
+    border: 1px solid gray;
+    width: 200px;
+}
+.ansers-box{
+    position: relative;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.comentators-name{
+    font-size: 1.3rem;
+    color: #0062B1;
+    margin-right: 1rem;
+}
+.comentators-box{
+margin-bottom: 0.8rem;
+}
+.color-coment-box{
+    color: gray;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+}
+
+.whenComented{
+    margin-left: 0.5rem;
+}
+.ansersBox{
+ margin-top: 2rem;  
+}
+.question-style{
+    padding: 0 0 0 0;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top:2rem;
+
+}
+
+.last-discussion{
+    font-size: 1.1rem;
+    margin-top:3rem;
+}
+
+.comment-box{
+    margin-bottom: 6rem;
+}
+
+.anser-to-anser{
+    font-size:1.1rem;
+    width:230px;
+    margin-left: 50%;
+    border: 1px solid gray;
+}

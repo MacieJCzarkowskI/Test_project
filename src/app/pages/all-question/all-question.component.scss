@@ -96,58 +96,45 @@ hr{
 }
 
 
-/////// to delete
+// menu 
 
-.header-question{
-    padding-top:25px;
-    padding-bottom: 25px;
-    position: relative;
-}
 
-.nameTochange1{
-    margin-top: 2rem;
-    color: #0062B1;
+.input-group{
+    padding: 0 0 0 0;
 }
-.information-inside-box{
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+.question-style{
+    padding: 0 0 0 0;
+    font-weight: 700;
+    font-size: 2rem;
 }
-
-.upvotes-text{
-    margin-top: 2rem;
-    margin-right: 15px;;
+menu img {
+    width: 32px;
+    height: 32px;
 }
 
-.up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
+.filter-by-author {
+    width: auto;
 }
-i {
-    border: solid #0062B1;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
+.space-pad1{
+    margin-left: 15px;
+    margin-right: 15px;
 }
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+.space-pad2{
+    margin-left: 15px;
 }
-.upvotes-text1{
-    margin-top: 1rem;
+
+.vertical-allign{
+    display: flex;
+    height: 100%; 
+    align-items:center;
 }
-.box-under-question{
-    font-size: 1.3rem;
-    position: absolute;
-    margin-left:50%;
-    left: -100px;
-    bottom:25px;
-    color:grey;
-    border: 1px solid gray;
-    width: 200px;
+
+.last-col span{
+    margin-left: 3px;
+    margin-right: 3px;
 }
-.ansers-box{
-    position: relative;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+.last-col span {
+    :hover{
+        color:grey;
+    }
 }

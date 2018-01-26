@@ -1,50 +1,69 @@
-<!--
+<div class="container menu">
+
+        <div class="row">
+        <div class="col-xl-1 question-style">&lt;</div>
+          <div class="col-xl-3 question-style">
+      
+            <p class="float-left">QUESTIONS</p>
+            <p class="float-right">
+              <a href="">
+                <img border="0" alt="" src="https://cdn4.iconfinder.com/data/icons/material-design-content-icons/512/add-circle-512.png"
+                  width="100" height="100">
+              </a>
+            </p>
+          </div>
+          <div class="col-xl-5"></div>
+          <div class="col-xl-2 last-discussion">Last time discussed</div>
+          <div class="col-xl-1 last-discussion">{{rows[id-1].author.whenComented}}</div>
+        </div>
+
+      </div>
+
+
+
+
 <div class="container header-question">
         <ul class="list-unstyled">
             <li>
                 <div class="row">
-                    <div class="col-xl-10">
+                    <div class="col-xl-12">
                         <div class="row">
-                            <div class="col-xl-2 text-center colored-background header-question">
-                                <img [src]="rows[0].author.imgPath" class="img-circle" alt="Cinque Terre"
+                            <div class="col-xl-1 text-center colored-background header-question">
+                                <img [src]="rows[id-1].author.imgPath" class="img-circle" alt="Cinque Terre"
                                     data-toggle="modal" data-target=".bd-example-modal-lg">
                             </div>
                             <div class="col-xl-8 colored-background header-question">
                                 <h2 class="txt1" data-toggle="modal" data-target=".bd-example-modal-lg">
-                                {{rows[0].author.name}}
+                                {{rows[id-1].author.name}}
                                     <span class="txt2">IS ASKING</span>
                                                         
                                 </h2>
-                                <h3 class="txt1">{{rows[0].title}}</h3>
+                                <h3 class="txt1">{{rows[id-1].title}}</h3>
                             </div>
-                            <div class="col-xl-2 colored-background">
+                            <div class="col-xl-3 colored-background">
                                 <div class="nameTochange1 text-right">UNFOLLOW</div>  
                             </div>
-                            
                         </div>
                     </div>
-    
-                    <div class="col-xl-2 uncolored"></div>
                 </div>
                  <div class="row">
-                    <div class="col-xl-10">
+                    <div class="col-xl-12">
                         <div class="row">
-                            <div class="col-xl-2 colored-background 
-                                        text-down-inside-header">
-                                
+                            <div class="col-xl-1 colored-background 
+                                        text-down-inside-header"> 
                             </div>
 
-                            <div class="col-xl-7 information-inside-box">
-                                 {{rows[0].author.text}}   
+                            <div class="col-xl-8 information-inside-box">
+                                 {{rows[id-1].author.text}}   
                             </div>
                             <div class="col-xl-2">
-                                <div class="upvotes-text">     
+                                <div class="upvotes-text text-right">     
 
-                                    <span class="upvotes-text">{{rows[0].author.upvotes}}</span>
+                                    <span class="upvotes-text">{{rows[id-1].author.upvotes}}</span>
                                     <span>upvotes</span>
                                 </div>
                             </div>
-                            <div class="col-xl-1">
+                            <div class="col-xl-1 text-right">
                                 <div class="upvotes-text1">
                                         <p><i class="arrow up"></i></p>
                                         <p><i class="arrow down"></i></p>
@@ -62,21 +81,81 @@
        
     </div> 
     <div class="container">
-            <div class="ansers-box text-center">{{rows[0].comments.length}} already answered {{rows[0].author.name}}</div>
+            <div class="ansers-box text-center">{{rows[id-1].comments.length}} already answered {{rows[id-1].author.name}}</div>
     </div>
     <div class="container">
-        <div class="row">
-                <div class="col-xl-2">
-                        <img [src]="rows[0].comments[0].imgPath" class="img-circle" alt="Cinque Terre">
-                </div>
-                <div class="col-xl-7">
-                    fff
-                </div>
-                <div class="col-xl-2">
-                ggg
-                </div>
+        <div *ngFor="let ansers of rows[id-1].comments" class="comment-box">
+            <div class="row">
+                <div class="col-xl-2"></div>
+                    <div class="col-xl-2">
+                        <img [src]="ansers.imgPath" class="img-circle" alt="Cinque Terre">
+                    </div>
+                    <div class="col-xl-5">
+                        <div>
+                            <span class="comentators-name">
+                                {{ansers.name}}
+                            </span> 
+                            <span class="color-coment-box">
+                                COMMENTED  IT
+                            </span>
+                            <span>
+                                {{ansers.whenComented}}
+                            </span>
+                        </div>
+                        <div class="comments">{{ansers.comment}}</div>
+                    </div>
+                    <div class="col-xl-2">
+                            <div class="upvotes-text">     
 
+                                <span class="upvotes-text">{{ansers.upvotes}}</span>
+                                <span>upvotes</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-1">
+                            <div class="upvotes-text1">
+                                    <p><i class="arrow up"></i></p>
+                                    <p><i class="arrow down"></i></p>
+                            </div>
+                        </div>
+            </div>
+            <div class="row ansersBox" *ngFor="let anserToComment of ansers.answer">
+                
+                    <div class="col-xl-3"></div>
+                    <div class="col-xl-1">
+                            <img [src]="anserToComment.imgPath" class="img-circle" alt="Cinque Terre">
+                    </div>
+                    <div class="col-xl-5">
+
+                            <div>
+                                <span class="comentators-name">
+                                    {{anserToComment.name}}
+                                </span> 
+                                <span class="color-coment-box">
+                                    COMMENTED  IT
+                                </span>
+                                <span>
+                                    {{anserToComment.whenComented}}
+                                </span>
+                            </div>
+                            <div class="comments">{{anserToComment.comment}}</div> 
+                    
+                        </div>
+                    <div class="col-xl-2">
+                            <div class="upvotes-text">     
+
+                                <span class="upvotes-text">{{anserToComment.upvotes}}</span>
+                                <span>upvotes</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-1">
+                            <div class="upvotes-text1">
+                                    <p><i class="arrow up"></i></p>
+                                    <p><i class="arrow down"></i></p>
+                            </div>
+                        </div>           
+            </div>
+            <div *ngIf="ansers.answer.length > 0"  class="text-center anser-to-anser">CONTINUE DISCUSSION</div>
+            <div *ngIf="ansers.answer.length === 0"  class="text-center anser-to-anser">COMMENT</div>
         </div>
     </div>
--->
-<h1>trololo</h1>
+

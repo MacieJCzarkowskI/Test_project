@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { QuestionService } from '../../shared/services/question.service';
+import { MatDialog } from '@angular/material';
+
 
 @Component({
   selector: 'app-single-question',
@@ -7,16 +10,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./single-question.component.scss']
 })
 export class SingleQuestionComponent implements OnInit {
-
-  @Input() row;
-
+  [x: string]: any;
+  public rows: any[];
+  public id;
   constructor(
+    private questionService: QuestionService,
+    public dialog: MatDialog,
     private router: ActivatedRoute
-  ) {
-    console.log(this.router)
+    ) 
+    {
+     this.id=this.router.snapshot.params.id;
   }
 
   ngOnInit() {
-  }
+    this.loadData();
 
+  }
+  private loadData() {
+    this.questionService.getQuestionListMock()
+      .first()
+      .subscribe(res => this.rows = res);
+  }
 }
