@@ -95,6 +95,23 @@ hr{
     color: red;
 }
 
+.last-col{
+    
+    .last-col1{
+    color:#0062B1;
+        &:hover{
+            color: gray;
+            text-decoration: underline;
+        }
+    }
+    .last-col2{
+        color:#0062B1;
+            &:hover{
+                color: gray;
+                text-decoration: underline;
+            }
+        }
+}
 
 // menu 
 

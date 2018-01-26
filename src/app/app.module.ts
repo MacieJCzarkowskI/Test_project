@@ -10,6 +10,7 @@ import { QuestionService } from './shared/services/question.service';
 import { MenuComponent } from './menu/menu.component';
 import { AppMaterialModule } from './material.module';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES, { useHash: false, preloadingStrategy: PreloadAllModules }),
-    AppMaterialModule
+    AppMaterialModule,
+    
   ],
   providers: [
     QuestionService

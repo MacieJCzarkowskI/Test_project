@@ -4,8 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class QuestionService {
-    getQuestionListMock(page: number = 0): Observable<any[]> {
-        const data = [
+    private static mockData = [
         {
             id:1,
             title: 'Will insulin make my patient gain weight?',
@@ -14,7 +13,7 @@ export class QuestionService {
                 imgPath: 'https://www.shareicon.net/data/128x128/2015/12/14/207810_face_300x300.png',
                 memberFor: '5 mounths',
                 lastSeen: 'Saturday',
-                activity: 3,
+                rows: 3,
                 whenComented: "yesterday",
                 text: "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet",
                 upvotes:233,
@@ -509,6 +508,15 @@ export class QuestionService {
             }
         },
     ];
-        return Observable.of(data);
+
+    updateMock(vote: boolean, id: number): Observable<any> {
+        const existent = QuestionService.mockData.find(d => d.id === +id);
+        if (existent) {
+            existent.author.upvotes += vote ? 1 : -1;
+        }
+        return Observable.of(existent ? existent : {});
+    }
+    getQuestionListMock(page: number = 0): Observable<any[]> {
+        return Observable.of(QuestionService.mockData);
     }
 }

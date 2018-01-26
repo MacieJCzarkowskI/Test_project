@@ -1,7 +1,7 @@
 <div class="container menu">
 
         <div class="row">
-        <div class="col-xl-1 question-style">&lt;</div>
+        <div class="col-xl-1 question-style"><a href="">&lt;</a></div>
           <div class="col-xl-3 question-style">
       
             <p class="float-left">QUESTIONS</p>
@@ -65,8 +65,8 @@
                             </div>
                             <div class="col-xl-1 text-right">
                                 <div class="upvotes-text1">
-                                        <p><i class="arrow up"></i></p>
-                                        <p><i class="arrow down"></i></p>
+                                        <p><i class="arrow up" (click)="setVote(true, id)"></i></p>
+                                        <p><i class="arrow down" (click)="setVote(false, id)"></i></p>
                                 </div>
                             </div>
                         </div>

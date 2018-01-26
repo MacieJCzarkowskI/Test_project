@@ -26,6 +26,15 @@ export class SingleQuestionComponent implements OnInit {
     this.loadData();
 
   }
+
+  public setVote(vote: boolean, id: number) {
+    this.questionService.updateMock(vote, id)
+      .first()
+      .subscribe(res => {
+        this.rows[this.id] = res;
+      });
+  }
+
   private loadData() {
     this.questionService.getQuestionListMock()
       .first()
